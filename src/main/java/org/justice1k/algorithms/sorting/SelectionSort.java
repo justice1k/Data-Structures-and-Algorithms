@@ -4,7 +4,7 @@ public class SelectionSort {
 
 //    Regular selection sort
     
-    public void sort(int[] arr){
+    public void selectionSort(int[] arr){
         int n = arr.length;
 
 //      first loop through array from first index to last but one index. Assume index i is the index with minimum value
