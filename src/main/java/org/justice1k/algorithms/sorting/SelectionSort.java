@@ -14,7 +14,7 @@ public class SelectionSort {
 //          loop through the array again with an inner loop but this time start from index i + 1 to the last element
             for (int j = i + 1; j < n; j++){
 
-//              compare the current index of the inner loop(j) to the currnt index of the outer loop(i)
+//              compare the current index of the inner loop(j) to the current index of the outer loop(i)
 //              assign minIndex to j if the value of the current inner loop index is lesser than the value of the current outer loop index
                 if (arr[j] < arr[i]){
                     minIndex = j;
