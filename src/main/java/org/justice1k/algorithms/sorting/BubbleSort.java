@@ -17,4 +17,24 @@ public class BubbleSort {
         }
     }
 
+//    Recursive bubble sort
+
+    public void recursive( int[] arr){
+        int n = arr.length;
+        recursiveSort(arr, n);
+    }
+
+    private void recursiveSort(int[] arr, int n){
+        if(n == 1) return;
+        for(int j = 0; j < n - 1; j++){
+            if(arr[j] > arr[j + 1]){
+                int temp = arr[j];
+                arr[j] = arr[j +1];
+                arr[j +1] = temp;
+            }
+        }
+
+        recursiveSort(arr, n-1);
+    }
+
 }
