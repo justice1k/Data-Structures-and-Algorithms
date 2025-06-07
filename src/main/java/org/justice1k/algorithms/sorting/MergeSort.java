@@ -9,9 +9,10 @@ public class MergeSort {
         if(low >= high) return;
 
         int mid = (low + high)/ 2;
-//        left part
+
+//        sorting left part
         sort(arr, low, mid);
-//        right part
+//        sorting right part
         sort(arr, mid+1, high);
         merge(arr, low,mid,high);
     }
