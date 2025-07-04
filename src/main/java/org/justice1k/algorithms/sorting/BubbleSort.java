@@ -6,9 +6,13 @@ public class BubbleSort {
 
     public void sort(int[] arr){
         int n = arr.length;
+//        first loop the array from first to last index
         for (int i = 0; i < n - 1; i++){
+//            loop through the array again with an inner loop from index i + 1 to the last index
             for (int j = i + 1; j< n; j++){
+//                check if the current index of the outer loop is larger than the current index of the inner loop
                 if (arr[i] > arr[j]){
+//                    swap them if true
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;

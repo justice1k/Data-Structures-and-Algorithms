@@ -9,6 +9,7 @@ public class SelectionSort {
 
 //      first loop through array from first index to last but one index. Assume index i is the index with minimum value
         for(int i = 0; i < n - 1; i++){
+
             int minIndex = i;
 
 //          loop through the array again with an inner loop but this time start from index i + 1 to the last element
