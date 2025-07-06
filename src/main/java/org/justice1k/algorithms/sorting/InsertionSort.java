@@ -4,7 +4,6 @@ public class InsertionSort {
 
 //    Regular Insertion Sort
 
-//    TODO: Comment
     public void sort(int[] arr){
 //        first loop through the array starting from the second element to the last element
         for (int i = 1; i <= arr.length -1; i++){
@@ -15,9 +14,7 @@ public class InsertionSort {
                 int temp = arr[j -1];
                 arr[j -1] = arr[j];
                 arr[j] = temp;
-
                 j--;
-
             }
         }
     }

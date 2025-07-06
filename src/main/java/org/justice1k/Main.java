@@ -1,5 +1,6 @@
 package org.justice1k;
 import org.justice1k.algorithms.sorting.BubbleSort;
+import org.justice1k.algorithms.sorting.MergeSort;
 
 import static java.util.Arrays.sort;
 
@@ -8,9 +9,10 @@ public class Main {
 
         int[] arr = {2,3,4,3,7,4,5,5,6,6,9,3};
 
-        BubbleSort bubbleSort = new BubbleSort();
+        int high = arr.length - 1;
 
-        bubbleSort.recursive(arr);
+        MergeSort mS = new MergeSort();
+        mS.sort(arr, 0, high);
 
 
 
