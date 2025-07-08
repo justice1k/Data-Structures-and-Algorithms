@@ -1,6 +1,7 @@
 package org.justice1k;
 import org.justice1k.algorithms.sorting.BubbleSort;
 import org.justice1k.algorithms.sorting.MergeSort;
+import org.justice1k.algorithms.sorting.QuickSort;
 
 import static java.util.Arrays.sort;
 
@@ -11,8 +12,8 @@ public class Main {
 
         int high = arr.length - 1;
 
-        MergeSort mS = new MergeSort();
-        mS.sort(arr, 0, high);
+        QuickSort qS = new QuickSort();
+        qS.sort(arr,0, high);
 
 
 
