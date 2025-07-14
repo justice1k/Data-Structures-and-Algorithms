@@ -1,4 +1,5 @@
 package org.justice1k;
+import org.justice1k.algorithms.searching.BinarySearch;
 import org.justice1k.algorithms.sorting.BubbleSort;
 import org.justice1k.algorithms.sorting.MergeSort;
 import org.justice1k.algorithms.sorting.QuickSort;
@@ -8,18 +9,19 @@ import static java.util.Arrays.sort;
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = {2,3,4,3,7,4,5,5,6,6,9,3};
+        int[] arr = {1,2,3,4,5,6,7,8,9};
 
-        int high = arr.length - 1;
-
-        QuickSort qS = new QuickSort();
-        qS.sort(arr,0, high);
+        int high = arr.length;
 
 
+        BinarySearch bs = new BinarySearch();
+        System.out.println(bs.search(arr,0,high,9)); //true
 
-        for (int i : arr){
-            System.out.print(i);
-        }
+
+
+//        for (int i : arr){
+//            System.out.println(i);
+//        }
 
     }
 }
