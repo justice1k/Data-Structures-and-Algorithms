@@ -2,13 +2,21 @@ package org.justice1k.datastructures.LinkedList;
 
 public class LinkedList<T> {
     private Node<T> head;
-    private Node<T> tail;
     private int size;
 
     public LinkedList(){
         head = null;
-        tail = null;
         size = 0;
+    }
+
+//  adding to the front of the list
+    public void addFirst(T data){
+        if(head == null){
+            head = new Node<>(data);
+        }else {
+            head = new Node<>(data,head);
+        }
+        size += 1;
     }
 
 //  adding element to the end of the list
@@ -17,11 +25,13 @@ public class LinkedList<T> {
 //      check if the element is the first to be in the list then make it the Head
         if(head == null){
             head = newNode;
-            tail = head;
         }else {
-//          if not the first element in the list, add it to the last element and update tail value
-            tail.next = newNode;
-            tail = newNode;
+//          add new node to the end of the list
+            Node<T> current = head;
+            while(current.next != null){
+                current = current.next;
+            }
+            current.next = new Node<>(data);
         }
         size += 1;
     }
@@ -45,6 +55,27 @@ public class LinkedList<T> {
             current.next = new Node<>(data,current.next);
         }
         size += 1;
+    }
+
+    public boolean remove(T data){
+        if(head == null){
+            return false;
+        }
+        if(head.data.equals(data)){
+            head = head.next;
+            size -= 1;
+            return true;
+        }
+        Node current = head;
+        while(current.next != null){
+            if(current.next.data.equals(data)){
+                current.next = current.next.next;
+                size -= 1;
+                return true;
+            }
+            current = current.next;
+        }
+        return  false;
     }
 
     public int size(){
